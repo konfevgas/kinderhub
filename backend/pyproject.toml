@@ -1,0 +1,12 @@
+[project]
+name = "kinderhub-backend"
+version = "0.1.0"
+description = "KinderHub backend API using FastAPI"
+authors = [{name = "Marios"}]
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+]
+
+[tool.uv]
+python = ">=3.10"
