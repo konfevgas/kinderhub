@@ -4,6 +4,7 @@ dependencies = [
   "alembic>=1.17.2",
   "fastapi",
   "psycopg[binary]>=3.2.12",
+  "pytest>=9.0.1",
   "python-dotenv>=1.2.1",
   "sqlalchemy>=2.0.44",
   "uvicorn[standard]",
