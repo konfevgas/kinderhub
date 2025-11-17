@@ -37,5 +37,10 @@ class Children(Base):
     full_name: Mapped[str] = mapped_column(String(255), nullable=False)
     birthdate: Mapped[date | None] = mapped_column(Date, nullable=True)
     notes: Mapped[str | None] = mapped_column(Text, nullable=True)
+    created_at: Mapped[datetime | None] = mapped_column(
+        DateTime,
+        server_default=func.now(),  # matches DEFAULT now()
+        nullable=True,
+    )
 
     parent: Mapped[Users] = relationship(back_populates="children")
