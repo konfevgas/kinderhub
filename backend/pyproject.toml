@@ -1,5 +1,5 @@
 [project]
-authors = [{name = "Marios"}]
+authors = [{name = "Kostas Fevgas"}]
 dependencies = [
   "alembic>=1.17.2",
   "fastapi",
