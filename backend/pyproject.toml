@@ -25,6 +25,7 @@ src = ["backend"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP"]
+extend-select = ["E501"]
 
 [tool.ruff.format]
 docstring-code-format = true
@@ -33,3 +34,8 @@ indent-style = "space"
 line-ending = "auto"
 quote-style = "double"
 skip-magic-trailing-comma = false
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.5",
+]
