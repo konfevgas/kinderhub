@@ -4,7 +4,8 @@ from datetime import date, datetime
 
 from sqlalchemy import Boolean, Date, DateTime, ForeignKey, Integer, String, Text, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-from src.app.database.connection import Base
+
+from app.database.connection import Base
 
 
 class Users(Base):
