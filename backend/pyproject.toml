@@ -1,18 +1,35 @@
 [project]
-name = "kinderhub-backend"
-version = "0.1.0"
-description = "KinderHub backend API using FastAPI"
 authors = [{name = "Marios"}]
-requires-python = ">=3.10"
 dependencies = [
-    "alembic>=1.17.2",
-    "fastapi",
-    "psycopg[binary]>=3.2.12",
-    "python-dotenv>=1.2.1",
-    "sqlalchemy>=2.0.44",
-    "uvicorn[standard]",
+  "alembic>=1.17.2",
+  "fastapi",
+  "psycopg[binary]>=3.2.12",
+  "python-dotenv>=1.2.1",
+  "sqlalchemy>=2.0.44",
+  "uvicorn[standard]",
 ]
+description = "KinderHub backend API using FastAPI"
+name = "kinderhub-backend"
+requires-python = ">=3.10"
+version = "0.1.0"
 
 [tool.uv]
 # You can add extra uv settings here if needed, but NOT python version
 python-preference = "system"
+
+[tool.ruff]
+fix = true
+line-length = 120
+show-fixes = true
+src = ["backend"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.ruff.format]
+docstring-code-format = true
+# dockstring-code-line-length = "dynamic"
+indent-style = "space"
+line-ending = "auto"
+quote-style = "double"
+skip-magic-trailing-comma = false
