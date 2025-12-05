@@ -18,13 +18,12 @@ type EndpointConfig = {
 
 const DEFAULT_ENDPOINTS: EndpointConfig[] = [
   {
-    id: "health",
-    label: "Health Check",
-    path: "/health",
+    id: "list_airports",
+    label: "List Airports",
+    path: "/list_airports",
     method: "GET",
-    description: "Simple health check of your FastAPI service.",
+    description: "Retrieve a list of all airports in the database.",
   },
-  // you can add more endpoints here later
 ];
 
 export function ApiPlayground() {
