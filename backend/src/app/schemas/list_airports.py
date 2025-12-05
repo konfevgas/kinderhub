@@ -3,15 +3,15 @@ from pydantic import BaseModel
 
 class ListAirportsReponse(BaseModel):
     id: int
-    name: str
-    city: str
-    country: str
-    iata: str | None
-    icao: str | None
-    latitude: float
-    longitude: float
-    altitude: int | None
-    timezone: str | None
+    name: str | None = None
+    city: str | None = None
+    country: str | None = None
+    iata: str | None = None
+    icao: str | None = None
+    latitude: float | None = None
+    longitude: float | None = None
+    altitude: int | None = None
+    timezone: str | None = None
 
     class Config:
-        from_attributes = True  # important for ORM
+        from_attributes = True
